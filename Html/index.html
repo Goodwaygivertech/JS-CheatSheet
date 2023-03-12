@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS CheatSeet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="prism.css" />
+    <script src="prism.js"></script>
+  </head>
+
+  <body class="line-numbers">
+    <!-- <nav class="navbar">
+
+<ul>
+    <li class="list">Home</li>   
+    <li class="list">About</li>
+</ul>
+
+    </nav> -->
+    <header class="hedding">HI THIS IS FOR YOU TO PRACTICE ALL JS</header>
+
+    <div class="handle">
+      <p id="ifelse" class="information">
+        * Hey bro first is ( if, else ) and ( if, else if, else ) In this we say
+        if some condition is true then do this else do this. When we are using (
+        if, else if, else ) then [else if] will become secondry condition. There
+        is anthor method is ( Switch )
+      </p>
+
+      <pre class="language-js"><code  class="presmstyle">
+        let a =  prompt("coose a number -")
+        a =Number.parseInt(a);
+        if(a<10){                       
+        console.log("your nuber is less then 10");
+        }
+        else if(a>10){
+        console.log("your nuber is gretter then 10");
+        }
+        else(
+        console.log("enter again your number");
+
+// There is Switch
+        
+        let num = prompt("whats your num -");
+        num = Number.parseInt(num);
+        switch(num){
+        case 4:
+        console.log("your number is 4 ");
+        break;
+                
+        case 8:
+        console.log("your nuber is 8");
+        break;
+                 
+        default :
+        console.log("enter num please")
+        })</code></pre>
+    </div>
+
+    <div class="handle">
+      <p class="forloop information">
+        *hey bro with this method we can print many things many times. There are
+        man tipe of this (for, for in loop, for of loop, forEach loop, while
+        loop, do while loop )
+      </p>
+      <pre class="language-js"><code>
+  // this is for loop
+
+        let n = prompt("what is your number -")
+        for (let a = 1; a < 11; a++) {
+        console.log(a * n)
+        }
+
+
+// this is for in loop
+
+        let obj = {
+        name: "shivam kumar",
+        livein: "bihar",
+        contry: "india",  
+        roolnum: 5467655
+        }
+        console.log(obj.name);  // We can get the value of name =>( obj.name )
+        for (let keys in obj) {
+        console.log(keys + " " + obj[keys])
+        } 
+
+
+// this is for of loop
+
+        let arr = [7, "shivam", 8, 9, "vikau"];
+        for (let value of arr) {  // we can give a "string" to replace with (arr).
+        console.log(value);
+        }
+
+
+// this is while loop
+
+        let a2 = 0;
+        while (a2 <= 10) {
+        console.log(a2 ** 3);
+        a2++;
+        }
+
+
+// this is do while loop
+
+        let a3 = 1;
+        do {
+        console.log(a3 * 2)
+        a3++;
+        } while (a3 < 11);</code></pre>
+    </div>
+
+    <div>
+      <pre class="language-js"><code>
+// The Use Of Template Litrul --
+
+        let name = "Shivam Kumar";
+        console.log(`my name is ${name}`);
+
+// Bro also remember--
+
+        let a = 20;
+        console.log("the given is shivam kumar is" , a>10 ? "right" : "wrong") 
+
+</code></pre>
+    </div>
+    <div class="string">
+      <pre class="language-js"><code>
+// important
+        let name = "shivam kuMar";
+        console.log(name.toUpperCase());
+        console.log(name.toLowerCase());
+        console.log(name.length);
+
+// use of slice
+        console.log(name.slice(2,4)); //Ans= iv // 2 to 4 of between caractor(2,3) will print (0,1,2,3,4,5,6,7.......... It work like this);
+        console.log(name.slice(2)); // will print all caractor after 2......;
+
+// use of replace();
+        console.log(name.replace("kuMar","raj"));
+
+// use of concat() for combined two strings ----
+        let firstname="shivam";
+        let lastname="kumar";
+        console.log(firstname.concat(" "+lastname));
+        console.log(name.concat(lastname), "2 times kumar hai");
+        console.log(firstname+ " " +lastname);
+
+// use of trim();
+        let myname ="shivam kumar         "; //i want to trim space
+        console.log(myname.trim() +" bhai ji ")
+        console.log(myname[5]); // Ans=m
+
+// endsWith();
+
+        console.log(myname.endsWith(" ")) // true // i am asking myname is endding with (" " -> space) if yes so print "true" OR "false". 
+        console.log(myname.endsWith("r")) // false
+
+
+// startsWith();
+        console.log(myname.startsWith(" ")); // false
+        console.log(myname.startsWith("s")); // true
+        console.log(myname.startsWith("S")); // false
+
+// use of includes(); it's a function [ indicate -> () ]. 
+        console.log(myname.includes("s"));
+        console.log("in my name s\" is", myname.includes("s") ? "avalable" : "not avalable" ); // Ans -> avalable
+        console.log("in my name S\" is", myname.includes("S") ? "avalable" : "not avalable" ); // Ans -> not avalable
+
+// how to write (", "", ', '') in strings.
+        console.log("hi bhai ji kya hal\' hai ");
+        console.log("hi bhai ji kya hal\'' hai ");
+        console.log("hi bhai ji kya hal\" hai ")
+        console.log('hi bhai ji kya hal\"" hai ');
+
+        console.log(("hi bhai ji kya hal\nhai").length)
+        console.log(("hi bhai ji kya hal\nhai")); // next line
+
+        console.log(("hi bhai ji kya hal\thai").length);
+        console.log("hi bhai ji kya hal\thai"); // crate a space only
+
+        console.log(("hi bhai ji kya hal\rhai").length);
+        console.log("shivam ji kya hal\rhai "); // here \r take "length" after self and remove the first caractor of "string" acording to "length".</code></pre>
+    </div>
+    <pre class="language-js"><code>
+        let arr = [3, 5, 6, 7, 3, 5, 8, "shivam"];
+        console.log(arr);
+        console.log(arr.length);
+        console.log(arr[2]);//Ans-> 6  // 0,1,2,3,4,5...... 
+        console.log(arr.length);
+
+// use of toString();
+                console.log(arr.toString()); // from here the both [] will remove.
+
+//use of join();
+        console.log(arr.join("1k ")); //Ans-> 31 51 61 71 31 51 81 shivam. not with "string"  //return like a string // the given value in join will atach with everyone value of array. //new array will be create
+
+
+//use of pop();
+        let popvalue= arr.pop();
+        console.log(popvalue); // Ans-> shivam (poped value) will pop the value in last
+        console.log(arr); // now will delete the "shivam" //array changed
+        console.log(arr.length); //Ans-> 7 one removed
+
+//use of push();
+        let push =arr.push(4); // will push the value in last
+        console.log(arr); //  new array a last value will be added
+        console.log(arr.length) // 8 //array changed
+
+//use of shift();
+        let shiftvalue =arr.shift(); // will remove the first value of array witch is 3.
+        console.log(arr); // new array first value will be removed 
+        console.log(arr.length); // 7 //array changed
+
+// use of unshift();
+        let unshift =arr.unshift("gautam bhai"); // will add in array in first.
+        console.log(arr); //  new array first value will be added
+        console.log(arr.length); // 8 //array changed
+
+// use of delete
+        let deletev = delete arr[0];
+        console.log(deletev)// true
+        console.log(arr); //array changed
+        console.log(arr.length)// will be same 8
+
+// use of concat();
+        let a1 =[2,0, 5,11, 22, 6,89];
+        let a2 =[7,90,"shivam raj"];
+        let a3 =[23,34,"gautam raj"]; //array will not be changed
+        console.log(a1.concat(a2,a3)); // in a1, a2 and a3 will be add.
+
+// use of sort(compare);
+
+        const compare=(a,b)=>{
+        return a-b; // b-a for ghatate karm
+        }
+        console.log(a1.sort()); // Ans-> 0, 11, 2, 22, 5, 6, 89 // it will sort like startwith 0,1,2,3,4,5,6.......
+        console.log(a1.sort(compare)); // badhate karm after this array will be change.
+        console.log(a1);
+
+//use of splice();
+        let  number =[1,2,3,4,5,6];
+        let splicevalue = number.splice(2, 1, 65, 67); // here 2 is position to add number // 1 is 2 se remove to number // 65 and 67 is add there number //here 3 will be remove.
+        console.log(splicevalue); // Ans-> 3
+        console.log(number);  // array changed
+
+// use of slice(); similer as string.
+        let number2 = [1,2,3,4,5,6,7];
+        let slicevalue =number2.slice(1,5)
+        console.log(slicevalue); // new array will print [2,3,4,5].
+        console.log(number2.slice(2)); // after 2 every value will be print.
+        console.log(number2); // nothing will be change in number2
+
+
+
+// use of reduce(); //it takes the function and work acording that.
+
+        const func = (h1,h2)=>{
+        return h1*h2; // h1-h2, h1*h2, h1**h2
+}
+        let number3 =[2,2,3]; //if( ** ) then -> 1^6=64; first_value *,+,-,** all after first.
+        // 2*, 2*3 , 2*6 =12; <<- like this.
+        console.log(number3.reduce(func));
+
+
+//use of filter(); takes a function to work.
+
+        const less_than_10 = (a)=>{
+        return a===10;
+        }
+        let number4= [43,76,8,32,9,0,7,"sk"];
+        let filteralnum = number4.filter(less_than_10); // number4.filter ke karan array ke value function me jayega and it will be use there.
+        console.log(filteralnum);
+        console.log(number4); // array will be not change.
+
+
+//use of map();  takes a function to work.
+
+        let mapfunc = (value, index, array)=>{
+        console.log(value<10);// answer in true or false
+        return value+index;
+        } // using map we can get three value (value, index, array);
+        let number5=[1,3,7,89,5476,5443];
+        console.log(number5.map(mapfunc));
+
+//use of forEach(); //it takes a function; 
+// 1St Way
+
+        let foreach =["ghfg", 9,0,565,7878,87];
+        let forfunc =(value, index, array)=>{
+        console.log(value, index , array)
+        }
+        foreach.forEach(forfunc);
+//2nd way
+
+        foreach.forEach((value, index, array)=>{ // using forEach we can get three value (value, index, array);
+        console.log(value, index, array);
+        });</code></pre>
+  </body>
+</html>
